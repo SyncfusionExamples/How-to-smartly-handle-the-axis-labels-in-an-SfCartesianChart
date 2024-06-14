@@ -31,8 +31,6 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 ... 
  ```
 
-  
- 
  ![Visualize axis labels are overlapped.](https://support.syncfusion.com/kb/agent/attachment/article/16155/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MDMzIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.v5xyfRpxTryA9y10ErRf4cjT5MImx9K7cii9TI5q8B4)
 
 **Hide:**
@@ -59,8 +57,6 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 ... 
  ```
  
- 
-  
  ![Hide.png](https://support.syncfusion.com/kb/agent/attachment/article/16155/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MDM2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.4wE53Own4RSb_l-UbO50DiAjyGmvw_GRBri7DQfZNW4)
 
 **MultipleRows:**
