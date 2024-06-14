@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+              xmlns:model="clr-namespace:ZoomEventsSample"
+             x:Class="ZoomEventsSample.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <model:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    
+    <Grid RowDefinitions="50,*" ColumnDefinitions="*">
+        <Border Grid.Row="0" Margin="{OnPlatform Default='20,10,20,0'}">
+        <HorizontalStackLayout Spacing="5">
+            <Label Text="Visible Minimum:" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding VisibleMinimum, StringFormat='{0:MMM d}'}" HorizontalTextAlignment="Center" />
+            <Label Text="Visible Maximum:" Margin="50,0,0,0" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding VisibleMaximum, StringFormat='{0:MMM d}'}" HorizontalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+        </Border>
+        <chart:SfCartesianChart x:Name="chart" Grid.Row="1" Grid.Column="0" 
+                                ZoomStart="chart_ZoomStart" ZoomEnd="chart_ZoomEnd">
+            <!--<chart:SfCartesianChart.Title>
+                <Label Text="Monitoring Stock Prices Over Time" HorizontalOptions="Center"/>
+            </chart:SfCartesianChart.Title>-->
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:DateTimeAxis x:Name="xAxis" PlotOffsetStart="15" 
+                                    PlotOffsetEnd="15"
+                                    ShowMajorGridLines="False"
+                                    IntervalType="Months">
+                    <chart:DateTimeAxis.Title>
+                        <chart:ChartAxisTitle Text="Year"/>
+                    </chart:DateTimeAxis.Title>
+                    <chart:DateTimeAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle LabelFormat="MMM-dd"/>
+                    </chart:DateTimeAxis.LabelStyle>
+                </chart:DateTimeAxis>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis ShowMajorGridLines="False" Maximum="120">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Stoke price"/>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:SfCartesianChart.ZoomPanBehavior>
+                <chart:ChartZoomPanBehavior x:Name="zoom"/>
+            </chart:SfCartesianChart.ZoomPanBehavior>
+
+            <!--Initialize the series for chart-->
+            <chart:AreaSeries ItemsSource="{Binding Data}"
+                                 XBindingPath="Year" 
+                                 YBindingPath="StrokePrice">
+                <chart:AreaSeries.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings/>
+                </chart:AreaSeries.DataLabelSettings>
+                <chart:AreaSeries.Fill>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#336699" Offset="0" />
+                        <GradientStop Color="#d9e6f2" Offset="1" />
+                    </LinearGradientBrush>
+                </chart:AreaSeries.Fill>
+            </chart:AreaSeries>
+        </chart:SfCartesianChart>
+    </Grid>
+</ContentPage>
