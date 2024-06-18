@@ -30,8 +30,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
  chart.XAxes.Add(primaryAxis);
 ... 
  ```
-
- ![Visualize axis labels are overlapped.](https://support.syncfusion.com/kb/agent/attachment/article/16155/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MDMzIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.v5xyfRpxTryA9y10ErRf4cjT5MImx9K7cii9TI5q8B4)
+  ![Visualize axis labels overlapped.](https://support.syncfusion.com/kb/agent/attachment/article/16155/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MjA1Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.QEr3OoXlM0JRD5mkv-nI4vI2AJEr58XitPEOBu4cp0s)
 
 **Hide:**
  When [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) is set to [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelsIntersectAction.html#Syncfusion_Maui_Charts_AxisLabelsIntersectAction_Hide), which axis labels don't have space that are hidden.
